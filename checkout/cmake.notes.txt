@@ -1,0 +1,4 @@
+cmake -P script.cmake
+
+# p48
+cmake -P hello_world.cmake
