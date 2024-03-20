@@ -2,3 +2,25 @@ cmake -P script.cmake
 
 # p48
 cmake -P hello_world.cmake
+
+brackets [=[ ... ]=*] are used to pass multiline strings
+
+quoted arguments can span multiple lines and interplate references.
+
+#56/57 Beispiel mit cmake\checkout\02.environment\CMakeLists.txt
+#!/bin/bash
+export myenv=first
+echo myenv is now $myenv
+Working with variables 57
+cmake -B build .
+cd build
+export myenv=second
+echo myenv is now $myenv
+cmake --build .
+
+#59
+Variable scopes
+* function scope
+* directory scope
+
+In 02.scope "cmake -B build ." ausführen

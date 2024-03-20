@@ -1,0 +1,10 @@
+# [=*[ ... ]=*] 
+message([[multiline
+bracket
+argument
+50 The CMake Language
+]])
+
+message([===[another 
+multiline bracket
+argument]===])
