@@ -1,1 +1,1 @@
-message("hello " world)
+message("hello " world "\nand this" \ three;separated;arguments)
