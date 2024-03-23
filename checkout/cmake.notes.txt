@@ -24,3 +24,26 @@ Variable scopes
 * directory scope
 
 In 02.scope "cmake -B build ." ausführen
+cmake -Wno-dev -B d:\projects\cmake\checkout\02.scope\build d:\projects\cmake\checkout\02.scope
+
+
+#p63 Beispiel mit list und if
+"D:\projects\cmake\checkout\02.list\CMakeLists.txt"
+
+#67 conditions, if ...
+VARIABLE/STRING IN_LIST <variable>
+COMMAND <command-name>
+POLICY <policy-id>
+TEST <test-name>
+TARGET <target-name>
+
+#68 Fileystem
+EXISTS <path-to-file-or-dir>
+<file1> IS_NEWER_THAN <file2>
+IS_DIRECTORY <path-to-dir>
+IS_SYMLINK <file-name>
+IS_ABSOLUTE <path>
+
+#69 foreach(<loop_variable> IN [LISTS <lists>] [ITEMS <items>])
+
+#77 cmake -P D:\projects\cmake\checkout\message_conext.cmake --log-context
