@@ -2,5 +2,5 @@
 
 int main()
 {
-    std::cout << "Quick check if things work." << std::endl;
+    std::cout << "\t\tQuick check if things work." << std::endl;
 }
