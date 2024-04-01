@@ -1,0 +1,31 @@
+cmake_minimum_required(VERSION 3.20)
+
+# add this options before PROJECT keyword
+set(CMAKE_DISABLE_SOURCE_CHANGES ON)
+set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+
+project(Hello)
+
+add_executable(Hello hello.cpp)
+
+set_property(TARGET Hello PROPERTY CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+add_subdirectory(cars)
+target_link_libraries(Hello PRIVATE cars)
+
+include(CheckIPOSupported)
+  check_ipo_supported(RESULT ipo_supported)
+if(ipo_supported)
+  message("IPO is supported")
+  set(CMAKE_INTERPROCEDURAL_OPTIMIZATION True)
+endif()
+
+message("size_of_void=${CMAKE_SIZEOF_VOID_P}")
+if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+  message(STATUS "Target is 64 bits")
+endif()
+if(CMAKE_SIZEOF_VOID_P EQUAL 4)
+  message(STATUS "Target is 32 bits")
+endif()

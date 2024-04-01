@@ -47,3 +47,8 @@ IS_ABSOLUTE <path>
 #69 foreach(<loop_variable> IN [LISTS <lists>] [ITEMS <items>])
 
 #77 cmake -P D:\projects\cmake\checkout\message_conext.cmake --log-context
+
+#104
+set_property(TARGET Hello PROPERTY CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
