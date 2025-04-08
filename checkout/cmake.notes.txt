@@ -1,3 +1,18 @@
+---------------------------------------------------------
+cmake / gtest
+ 
+gtest runterladen, ins gtest Verzeichnis wechseln
+# Configure the build
+cmake -S . -B build
+
+# Build debug binaries
+cmake --build build --config Debug
+
+# Build release binaries
+cmake --build build --config Release
+---------------------------------------------------------
+
+
 cmake -P script.cmake
 
 # p48
