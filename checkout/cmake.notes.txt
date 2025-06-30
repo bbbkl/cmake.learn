@@ -10,6 +10,9 @@ cmake --build build --config Debug
 
 # Build release binaries
 cmake --build build --config Release
+
+
+// set(CMAKE_DEBUG_POSTFIX d)
 ---------------------------------------------------------
 
 
